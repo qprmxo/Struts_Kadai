@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config 
+  PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+  "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="userForm" type="studys.form.UserForm"/>
+		<form-bean name="ajaxForm" type="studys.form.AjaxForm"/>
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/join" type="studys.action.JoinAction" name="userForm" scope="request">
+			<forward name="result" path="/user/result.jsp"/>
+		</action>
+		
+		<action path="/idCheck" type="studys.action.IDcheckAction" name="ajaxForm"/>
+		<action path="/joinCheck" type="studys.action.JoincheckAction" name="userForm" scope="request">
+			<forward name="success" path="/user/joinCheck.jsp"/>
+		</action>
+		
+		<action path="/login" type="studys.action.LoginAction" name="userForm" scope="request">
+			<forward name="success" path="/user/search.jsp"/>
+			<forward name="result" path="/user/result.jsp"/>
+		</action>
+		<action path="/logout" type="studys.action.LogoutAction" name="userForm" scope="request">
+			<forward name="result" path="/user/result.jsp"/>
+		</action>
+		
+		<action path="/search" type="studys.action.SearchAction" name="userForm" scope="request">
+			<forward name="success" path="/user/search.jsp"/>
+			<forward name="update" path="/user/update.jsp"/>
+			<forward name="delete" path="/user/deleteCheck.jsp"/>
+		</action>
+		<action path="/delete" type="studys.action.DeleteAction" name="userForm" scope="request">
+			<forward name="success" path="/user/result.jsp"/>
+		</action>
+		<action path="/update" type="studys.action.UpdateAction" name="userForm" scope="request">
+			<forward name="success" path="/user/result.jsp"/>
+			<forward name="update" path="/user/updateCheck.jsp"/>
+		</action>
+		
+	</action-mappings>
+	  
+
+</struts-config>
