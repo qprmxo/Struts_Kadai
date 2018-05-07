@@ -43,13 +43,13 @@
 			$("#frm").submit();
 		});
 		
-		$("#btnUpdate").on('click', function(){
-			var id = $("#btnUpdate").attr("data-value");
+		$(".btnUpdate").on('click', function(){
+			var id = $(this).val();
 			location.href="search.do?id=" + id + "&cmd=update";
 		});
 		
-		$("#btnDelete").on('click', function(){
-			var id = $("#btnDelete").attr("data-value");
+		$(".btnDelete").on('click', function(){
+			var id = $(this).val();
 			location.href="search.do?id=" + id + "&cmd=delete";
 		});
 
@@ -106,7 +106,7 @@
 			<td>${vo.kana }</td>
 			<td>${vo.birth }</td>
 			<td>${vo.club }</td>
-			<td><button type="button" id="btnUpdate" data-value="${vo.id }">更新</button><button type="button" id="btnDelete" data-value="${vo.id }">削除</button></td>
+			<td><button type="button" class="btnUpdate" value="${vo.id }">更新</button><button type="button" class="btnDelete" value="${vo.id }">削除</button></td>
 		</tr>
 	</c:forEach>
 </table>

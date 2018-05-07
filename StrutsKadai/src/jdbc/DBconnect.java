@@ -153,7 +153,7 @@ public class DBconnect {
 		String nameC = nameValue + "%";
 		String kanaC = kanaValue + "%";		
 	
-		String sql = "select u.*,ud.* from user1 u, userdetail ud where u.id=ud.id and u.id like ? and u.name like ? and u.kana like ?";
+		String sql = "select u.*,ud.* from user1 u, userdetail ud where u.id=ud.id and u.id like ? and u.name like ? and u.kana like ? order by ud.no asc";
 				
 		try {
 			connect();
