@@ -45,12 +45,12 @@
 		
 		$(".btnUpdate").on('click', function(){
 			var id = $(this).val();
-			location.href="search.do?id=" + id + "&cmd=update";
+			location.href="/StrutsKadai/search.do?id=" + id + "&cmd=update";
 		});
 		
 		$(".btnDelete").on('click', function(){
 			var id = $(this).val();
-			location.href="search.do?id=" + id + "&cmd=delete";
+			location.href="/StrutsKadai/search.do?id=" + id + "&cmd=delete";
 		});
 
 	});

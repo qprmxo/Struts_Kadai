@@ -42,7 +42,7 @@
 	
 	<h1>【データ削除の確認】</h1>
 	
-	<form action="delete.do" method="post" id="frm">
+	<form action="/StrutsKadai/delete.do" method="post" id="frm">
 		<table border="1">
 			<tr>
 				<th>ユーザID</th><td><input type="text" name="id" value="${user.id }" readonly="readonly"></td>

@@ -12,9 +12,9 @@
 		var result = document.getElementById("result").value;
 		alert(result);
 		if($("#cmd").val() == "fail"){
-			location.href="main.jsp";
+			location.href="/StrutsKadai/main.jsp";
 		}else{
-			location.href="user/search.jsp";
+			location.href="/StrutsKadai/user/search.jsp";
 		}
 	}
 </script>

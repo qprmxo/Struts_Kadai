@@ -56,7 +56,7 @@
 <body>
 <h1>【データ変更入力】</h1>
 
-<form action="update.do" id="frm" method="post">
+<form action="/StrutsKadai/update.do" id="frm" method="post">
 	<table border="1">
 		<tr>
 			<th>ユーザID</th><td><input type="text" name="id" id="id" value="${user.id }" readonly="readonly"></td>
