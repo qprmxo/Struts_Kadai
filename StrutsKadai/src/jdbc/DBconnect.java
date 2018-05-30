@@ -163,6 +163,7 @@ public class DBconnect {
 			pstmt.setString(2, nameC);
 			pstmt.setString(3, kanaC);
 			rs = pstmt.executeQuery();
+			
 			while(rs.next()) {
 				String id = rs.getString("id");
 				String name = rs.getString("name");
