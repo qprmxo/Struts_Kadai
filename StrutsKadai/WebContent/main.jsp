@@ -59,6 +59,6 @@
 	<br>
 	
 	<a href="user/join.jsp">新規加入</a>
-	
+	git test!
 </body>
 </html>
